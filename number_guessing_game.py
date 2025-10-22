@@ -17,7 +17,7 @@ while True:
     else:
         print("your guess is not correct.")
         print("GIve it another shot.")
-        print("Choose a higher number.")
+        print("Choose a another number.")
 
         user_num_guess2 = int(input("Enter guess number again: "))
 
