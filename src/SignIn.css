@@ -1,0 +1,231 @@
+/* Import a modern, high-quality font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    /* Geometric, classy font */
+    background-color: #f8fafc;
+    /* Very light cool grey */
+}
+
+.sign-in-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 48px 40px;
+    border-radius: 20px;
+    /* Softer, more modern corners */
+    /* This shadow makes it look "Classy" */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04), 0 20px 50px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+/* Header Section */
+.brand-name {
+    color: #0d9488;
+    /* Sophisticated Teal */
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+}
+
+.tagline {
+    color: #64748b;
+    /* Muted Slate Blue */
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.register-text {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.register-text a {
+    color: #0d9488;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #f1f5f9;
+    margin: 24px 0;
+}
+
+/* Input Styling */
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #fbfcfd;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0d9488;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+/* Button Styling */
+.signin-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+    /* Premium Gradient Orange */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.signin-btn:hover {
+    box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+    transform: translateY(-1px);
+}
+
+.forgot-password {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #64748b;
+}
+
+/* ... keep all your previous CSS ... */
+
+/* Password toggle styling (cleaner than inline styles) */
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0d9488;
+    background: #fff;
+    padding-left: 5px;
+}
+
+/* Remember Me Styling */
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #64748b;
+    user-select: none;
+}
+
+/* Hide default checkbox */
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create custom checkbox */
+.custom-checkbox {
+    height: 18px;
+    width: 18px;
+    background-color: #f1f5f9;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s;
+}
+
+/* On hover */
+.checkbox-label:hover input~.custom-checkbox {
+    border-color: #0d9488;
+}
+
+/* When checked */
+.checkbox-label input:checked~.custom-checkbox {
+    background-color: #0d9488;
+    border-color: #0d9488;
+}
+
+/* The checkmark icon */
+.custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked~.custom-checkbox:after {
+    display: block;
+}
